@@ -1,0 +1,12 @@
+.secondary-nav {
+  height: 100%;
+  padding-top: 10rem;
+
+  > ul {
+    list-style: none;
+
+    > li {
+      @include heading;
+    }
+  }
+}

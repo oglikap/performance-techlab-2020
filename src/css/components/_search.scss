@@ -1,0 +1,45 @@
+.search {
+
+  &__icon {
+  
+  }
+
+
+
+
+  &-term {
+    width: 75%;
+    box-sizing: border-box;
+    border: 0;
+    padding: 1rem 0;
+    margin: 0;
+    background-color: transparent;
+    font-size: 1rem;
+    outline: 0;
+    color: $color-orange;
+
+    @include respond-medium {
+      width: 80%;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__fallback {
+
+    input {
+      width: 90%;
+      @include heading;
+      padding: 4px 8px;
+      border: 2px solid #f7f7f7;;
+    }
+  }
+
+  &__submit {
+    color: #f7f7f7;
+    border: 2px solid;
+    background-color: transparent;
+    @include heading;
+    padding: 2px 4px;
+  }
+
+}

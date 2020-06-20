@@ -1,0 +1,11 @@
+.page-numbers {
+  @include heading;
+  display: inline-block;
+  font-size: .85rem;
+  padding: .5rem 0 .5rem .5rem;
+
+  &.current {
+    font-size: 1.25rem;
+    color: $color-orange;
+  }
+}

@@ -1,0 +1,107 @@
+.bs-hero {
+  position: relative;
+  background-image: linear-gradient(to right, rgba(#000, .5), transparent), url(/performance-techlab/wp-content/themes/performance-techlab-2020/assets/images/perftech-bg-smaller.jpg);
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+
+  @include respond-small {
+    background-image: linear-gradient(to right, rgba(#000, .5), transparent), url(/performance-techlab/wp-content/themes/performance-techlab-2020/assets/images/perftech-bg-small.jpg);
+    min-height: 80vh;
+  }
+
+  @include respond-medium {
+    background-image: linear-gradient(to right, rgba(#000, .5), transparent), url(/performance-techlab/wp-content/themes/performance-techlab-2020/assets/images/perftech-bg-medium.jpg);
+    /* min-height: 90vh; */
+  }
+
+  @include respond-large {
+    /* min-height: 100vh; */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), transparent), url(/performance-techlab/wp-content/themes/performance-techlab-2020/assets/images/perftech-bg.jpg);
+  }
+
+  &__image {
+    display: block;
+  }
+
+  &__text {
+    width: 66.66%;
+    color: #f7f7f7;
+    font-size: .75rem;
+
+    @include respond-small {
+      width: 50%;
+      font-size: .8rem;
+    }
+
+    @include respond-medium {
+      margin-top: 6.25rem;
+      font-size: .95rem;
+      width: 33.333333%;
+    }
+
+    &-inner {
+      padding: 2rem .5rem;
+    }
+  }
+
+  &__button {
+    margin-top: 6.25rem;
+    color: #f7f7f7;
+    // border: 1px solid rgba(#fff, .1);
+
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    // background-color: rgba(#f7f7f7, .2);
+    background-image: radial-gradient(rgba(#fff, 1) 10px, rgba(#fff, .3) 25%, rgba(#fff, .1) 40%, transparent 50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(6deg) translateY(-70%);
+
+    position: absolute;
+    top: 33%;
+    right: 5%;
+
+    @include respond-medium {
+      width: 11rem;
+      height: 11rem;
+    }
+
+    &-text {
+      height: 100%;
+      text-transform: uppercase;
+
+      line-height: .85;
+      font-family: $font-heading;
+      font-size: 1.75rem;
+
+      color: $color-red;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+
+      @include respond-medium {
+        font-size: 2.25rem;
+      }
+    }
+
+    &-link {
+      color: #fff;
+      display: inline-block;
+      transition: all .2s;
+      text-decoration: none;
+
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+        transform: scale(1.05);
+      }
+    }
+
+  }
+}

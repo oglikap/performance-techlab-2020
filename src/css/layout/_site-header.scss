@@ -1,0 +1,194 @@
+.admin-bar .site-header__wrap {
+  top: 32px;
+}
+
+.site-header {
+
+  &--is-expanded {
+    background-color: rgba(#fff, .75);
+  }
+
+  &__wrap {
+
+    &--border {
+      border-bottom: 1px solid;
+    }
+
+    @include respond-medium {
+
+      position: fixed;
+      z-index: 2;
+      background-color: white;
+      width: 100%;
+      transition: all .3s ease-out;
+      left: 0;
+
+      &--alt {
+        background-color: #fff;
+        border-bottom: 1px solid;
+      }
+
+      &--invisible {
+        opacity: 0;
+      }
+
+      &--visible {
+        opacity: 1;
+      }
+
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 .5rem;
+
+    @include respond-large {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+  }
+
+  &__logo {
+    flex: 0 0 33%;
+  }
+
+  &__icon-location {
+    width: 8rem;
+    height: 5rem;
+
+    @include respond-medium {
+      width: 11.5rem;
+      height: 5rem;
+      transition: all .3s ease-out;
+
+      .site-header__wrap--alt & {
+        width: 8rem;
+        height: 5rem;
+      }
+    }
+  }
+
+  &__menu-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    position: absolute;
+    z-index: 13;
+
+    @include respond-medium {
+      margin-top: 4px;
+
+      .site-header__wrap--alt & {
+        transform: scale(.8);
+      }
+
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 2rem;
+      height: 3px;
+      background-color: $color-black;
+      transform-origin: 0 0;
+      transition: transform .3s ease-out;
+
+      @include respond-medium {
+        width: 2.25rem;
+        height: 4px;
+      }
+
+      @include respond-large {
+        width: 2.5rem;
+        height: 4px;
+      }
+    }
+
+    &__middle {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      width: 2rem;
+      height: 3px;
+      background-color: $color-black;
+      transition: all .3s ease-out;
+      transform-origin: 0 50%;
+
+      @include respond-medium {
+        width: 2.25rem;
+        height: 4px;
+        top: 18px;
+      }
+
+      @include respond-large {
+        width: 2.5rem;
+        height: 4px;
+        top: 20px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 0;
+      width: 2rem;
+      height: 3px;
+      background-color: $color-black;
+      transform-origin: 0 100%;
+      transition: transform .3s ease-out;
+
+      @include respond-medium {
+        width: 2.25rem;
+        height: 4px;
+        top: 28px;
+      }
+
+      @include respond-large {
+        width: 2.5rem;
+        height: 4px;
+        top: 32px
+      }
+    }
+  }
+
+  &__menu-icon--close-x {
+    &::before {
+      transform: rotate(45deg) scaleX(1.2) translateY(-6px);
+    }
+
+    .site-header__menu-icon__middle {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    &::after {
+      transform: rotate(-45deg) scaleX(1.2) translateY(7px);
+    }
+  }
+
+  &__menu-content {
+    opacity: 0;
+    z-index: -10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: #fff;
+
+    &--is-visible {
+      opacity: 1;
+      z-index: -1;
+      transform: scale(1);
+    }
+  }
+
+}

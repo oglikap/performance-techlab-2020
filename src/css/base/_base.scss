@@ -1,0 +1,33 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Merryweather', serif;
+  font-weight: 400;
+  color: $color-black;
+  word-break: break-word
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $color-black;
+
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+main {
+  padding-top: 5rem;
+  min-height: 66.66vh;
+}

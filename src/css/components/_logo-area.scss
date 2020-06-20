@@ -1,0 +1,33 @@
+.logo-area {
+  margin-left: auto;
+  margin-right: auto;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid;
+
+    @include respond-large {
+      border: 0;
+      border-top: 1px solid;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__partners,
+  &__powered {
+    flex: 0 0 100%;
+    padding: 1rem;
+
+    @include respond-large {
+      flex: 0 0 50%;
+      padding: 0 1rem;
+    }
+
+  }
+
+  &__powered {
+    flex: 1;
+  }
+}

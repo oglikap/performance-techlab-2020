@@ -1,0 +1,21 @@
+.block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #f7f7f7;
+  padding: .75rem .5rem;
+
+  &__nav {
+    font-size: .75rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    @include heading;
+    display: inline-block;
+    padding-right: .5rem;
+    text-decoration: none;
+  }
+}

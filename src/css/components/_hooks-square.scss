@@ -1,0 +1,83 @@
+.bs-hooks-square {
+  position: relative;
+  display: inline-block;
+
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &--small {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    @include respond-medium {
+      width: 3.5rem;
+      height: 3.5rem;
+
+      .site-header__wrap--alt & {
+        transform: scale(.8);
+      }
+    }
+  }
+
+  &--medium {
+    width: 5.5rem;
+    height: 5.5rem;
+    z-index: 10;
+
+    @include respond-medium {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  &__text {
+    font-size: .8rem;
+    height: 100%;
+    text-transform: uppercase;
+    margin: 0 auto;
+    line-height: 1;
+    font-family: $font-heading;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-medium {
+      font-size: 1rem;
+    }
+
+    &--large {
+      font-size: 2rem;
+    }
+  }
+}
+
+.bs-hooks-square::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+
+  background-color: currentColor;
+  -webkit-mask-image: url(/performance-techlab/wp-content/themes/performance-techlab-2020/assets/images/foto-kader.png);
+  -webkit-mask-size: cover;
+  mask-image: url(/performance-techlab/wp-content/themes/performance-techlab-2020/assets/images/foto-kader.png);
+  mask-size: cover;
+  position: absolute;
+  z-index: 4;
+
+}
+
+.bs-hooks-square--red {
+
+  &::before {
+    background-color: $color-red;
+  }
+
+  span {
+    color: $color-red;
+  }
+
+}

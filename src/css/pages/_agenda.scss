@@ -1,0 +1,101 @@
+.agenda {
+  padding-bottom: 6rem;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-large {
+      flex-direction: row;
+    }
+
+    &:nth-of-type(2n) {
+
+      @include respond-large {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &:nth-of-type(6n+1) {
+      background-color: $color-purple;
+      color: #fff;
+    }
+
+    &:nth-of-type(6n+2) {
+      color: #fff;
+      background-color: $color-orange;
+    }
+
+    &:nth-of-type(6n+3) {
+      color: #000;
+      background-color: $color-mint;
+    }
+
+    &:nth-of-type(6n+4) {
+      color: #000;
+      background-color: $color-blue-grey;
+    }
+
+    &:nth-of-type(6n+5) {
+      color: #fff;
+      background-color: $color-red;
+    }
+  }
+
+  &__text {
+    flex: 0 0 calc(50% - 4rem);
+    padding: 2rem;
+    font-size: .85rem;
+
+    p:last-of-type {
+      font-size: .75rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1;
+    font-size: 1.5rem;
+    font-family: $font-heading;
+
+    &-content {
+      display: flex;
+      align-items: center;
+    }
+
+    @include respond-xlarge {
+      font-size: 1.75rem;
+    }
+
+    .bs-hooks-square__text {
+      font-size: 1.75rem;
+      letter-spacing: -1px;
+
+      @include respond-xlarge {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__when {
+    font-size: 1rem;
+    margin-top: .7rem;
+    word-spacing: -.5rem;
+  }
+
+  &__where {
+    font-size: 1.2rem;
+    word-spacing: -.7rem;
+    margin-top: 2px;
+  }
+
+  &__photo {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    min-height: 30rem;
+  }
+
+}

@@ -1,0 +1,26 @@
+.page-content {
+
+  
+
+  .uk-link, a {
+    color: currentColor;
+    border-bottom: 2px solid;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-yellow;
+    }
+  }
+
+  strong a {
+    color: currentColor;
+    @include heading;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: normal;
+
+    &:hover {
+      color: $color-yellow;
+    }
+  }
+}

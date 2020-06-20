@@ -1,0 +1,71 @@
+.site-footer {
+  background-color: $color-black;
+  text-align: center;
+
+  * {
+    color: #f7f7f7;
+  }
+
+  &__wrap {
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+
+    @include respond-medium {
+      flex-direction: row;
+    }
+  }
+
+  &__logo {
+    flex: 0 0 33.33%;
+    font-weight: 300;
+    font-size: .6rem;
+    display: flex;
+    fill: currentColor;
+    flex: 0 0 33.3333%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+
+    &-location {
+      width: 7.5rem;
+    }
+  }
+
+  &__colophon {
+    flex: 0 0 33%;
+    font-size: .75rem;
+    line-height: 1.5;
+    padding: 1rem 2rem;
+  }
+
+  &__social {
+    flex: 1;
+    @include heading;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &-list {
+      list-style: none;
+      display: flex;
+      padding: 0;
+    }
+
+    &-item {
+      margin: 0 .5rem;
+    }
+
+    &-link {
+      text-decoration: none;
+    }
+  }
+
+
+
+}

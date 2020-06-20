@@ -1,0 +1,30 @@
+.bs-contact {
+  // padding: 6rem 0;
+  background-color: #f7f7f7;
+}
+
+.bs-fieldset {
+  padding: 6rem 0;
+}
+
+.bs-legend {
+
+  &__header {
+    @include heading;
+    font-size: 1.25rem;
+  }
+
+}
+
+.bs-label {
+
+  > span > input {
+    padding: .5rem;
+    font-family: $font-main;
+  }
+
+  > span > textarea {
+    width: 85%;
+  }
+
+}

@@ -1,0 +1,90 @@
+.search-overlay {
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 110;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#fff, .9);
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(1.09);
+  transition: opacity .3s, transform .3s, visibility .3s;
+  box-sizing: border-box;
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+  }
+
+  &__section {
+
+    &-title {
+      @include heading;
+    }
+
+  }
+
+  &__icon {
+    margin-right: 10px;
+    font-size: 1.8rem;
+    color: $color-black;
+
+    @include respond-large {
+      font-size: 2.5rem;
+    }
+  }
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  p {
+    padding-top: 1rem;
+  }
+
+  body.admin-bar & {
+    top: 32px;
+  }
+
+  &__top {
+    background-color: rgba(0, 0, 0, .12);
+  }
+
+  &__close {
+    cursor: pointer;
+    transition: all .3s;
+    line-height: .7;
+  }
+}
+
+
+.body-no-scroll {
+  overflow: hidden;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.spinner-loader {
+  margin-top: 45px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 0.25rem solid rgba(0, 0, 0, 0.2);
+  border-top-color: black;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}

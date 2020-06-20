@@ -1,0 +1,176 @@
+.tiles {
+  margin: 1rem 0 6rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__item {
+    width: 50%;
+    display: flex;
+    color: #fff;
+
+    &:nth-of-type(6n+1) {
+      background-color: $color-purple;
+    }
+
+    &:nth-of-type(6n+2) {
+      background-color: $color-orange;
+    }
+
+    &:nth-of-type(6n+3) {
+      background-color: $color-mint;
+      color: $color-black
+    }
+
+    &:nth-of-type(6n+4) {
+      background-color: $color-blue-1;
+    }
+
+    &:nth-of-type(6n+5) {
+      background-color: $color-pink;
+    }
+
+    &:nth-of-type(6n+6) {
+      background-color: $color-yellow;
+      color: $color-black;
+    }
+
+    &:nth-of-type(4n+3),
+    &:nth-of-type(4n+4) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__text {
+    flex: 0 0 50%;
+    font-size: .85rem;
+
+    &-inner {
+      padding: 1rem 2rem;
+      word-spacing: -1px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: currentColor;
+  }
+
+  &__button {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    // border: 2px solid;
+    @include heading;
+    color: currentColor;
+    font-size: .7rem;
+    margin-left: 1rem;
+    transition: .3s all;
+
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: -1rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: currentColor;
+      margin-right: 8px;
+    }
+
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+
+  &__tags {
+    margin-top: 1rem;
+    font-size: .6rem;
+    opacity: .85;
+
+    * {
+      color: currentColor;
+    }
+
+    > span {
+      @include heading;
+    }
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      @include heading;
+      padding: 2px 4px;
+      margin: 2px;
+      color: #fff;
+      filter: grayscale(.75);
+
+      &:nth-of-type(4n+1) {
+        background-color: $color-blue-1;
+      }
+
+      &:nth-of-type(4n+2) {
+        background-color: $color-purple;
+      }
+
+      &:nth-of-type(4n+3) {
+        background-color: #555;
+      }
+
+      &:nth-of-type(4n+4) {
+        background-color: $color-red;
+      }
+    }
+  }
+
+  &__photo {
+    flex: 1;
+    background-image: url(/performance-techlab/wp-content/themes/performance-techlab-2020/assets/images/Zomeratelier-logo-voor-website.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 18.75rem;
+  }
+}
+
+.tiles-large {
+
+  &__item {
+    width: 100%;
+  }
+
+  &__text {
+    font-size: .9rem;
+
+    &-inner {
+      padding: 2rem 4rem;
+    }
+  }
+
+  &__video {
+    flex: 1;
+    position: relative;
+    padding-bottom: calc(56.25% / 2);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #555;
+
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
